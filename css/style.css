@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Habilita a rolagem suave quando se clica nos links do menu */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ccc; /* Cor de fundo suave */
+    color: #333; /* Cor do texto principal */
+}
+
+/* Estilo do Cabeçalho e Navegação */
+header {
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky; /* Deixa o menu fixo no topo ao rolar */
+    top: 0;
+    z-index: 1000; /* Garante que o menu fique sobre outros elementos */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex; /* Coloca os itens do menu em linha */
+    justify-content: center; /* Centraliza os itens no menu */
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #a7a7a7; /* Efeito visual ao passar o mouse */
+}
+
+/* Estilo padrão para todas as seções */
+section {
+    padding: 40px 20px;
+    max-width: 960px; /* Limita a largura do conteúdo para melhor leitura */
+    margin: 0 auto; /* Centraliza as seções */
+    border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Estilo do Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+/* Estilo para o link ATIVO no menu de navegação */
+header nav ul li a.active {
+    color: #000000; /* Uma cor de destaque */
+    border-bottom: 2px solid #000000; /* Sublinhado para reforçar o destaque */
+    padding-bottom: 5px;
+}
+
+/* Estilo para o botão "Voltar ao Topo" */
+#voltar-ao-topo {
+    position: fixed; /* Posição fixa na tela */
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%; /* Formata o botão redondo */
+    text-decoration: none;
+    font-size: 24px;
+    opacity: 0; /* Inicialmente invisível */
+    visibility: hidden; /* Inicialmente escondido */
+    transition: opacity 0.3s, visibility 0.3s; /* Animação suave */
+    z-index: 1000;
+}
+
+/* Classe que o JavaScript vai adicionar para mostrar o botão */
+#voltar-ao-topo.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#portfolio {
+    /* Força a seção a ter, no mínimo, 80% da altura da tela do dispositivo. para permiter o destaque no header*/
+    min-height: 80vh; 
+}
+
+/* Estilos específicos para a seção 'Portfolio' */
+#portfolio .projeto {
+    background-color: #afafaf;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px; /* Bordas arredondadas para os cards */
+}
