@@ -26,6 +26,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
+
+    // --- VALIDAÇÃO SIMPLES DO FORMULÁRIO ---
+    const contactForm = document.querySelector('#contato form');
+    contactForm.addEventListener('submit', (event) => {
+        // Pega os valores dos campos do formulário
+        const nome = document.querySelector('#nome').value;
+        const email = document.querySelector('#email').value;
+        const mensagem = document.querySelector('#mensagem').value;
+
+        // Verifica se algum campo está vazio
+        if (nome === '' || email === '' || mensagem === '') {
+            // Previne o envio do formulário
+            event.preventDefault();
+            // Exibe um alerta simples para o usuário
+            alert('Por favor, preencha todos os campos do formulário.');
+        }
+    });
+
     
     // --- BOTÃO "VOLTAR AO TOPO" ---
     const backToTopButton = document.querySelector('#voltar-ao-topo');

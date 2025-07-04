@@ -60,6 +60,35 @@ section h2 {
     font-size: 2rem;
 }
 
+/* Estilos para o formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+.campo-customizado {
+    background-color: #dddddd;
+}
+
 /* Estilo do Rodapé */
 footer {
     text-align: center;
@@ -99,11 +128,6 @@ header nav ul li a.active {
 #voltar-ao-topo.show {
     opacity: 1;
     visibility: visible;
-}
-
-#portfolio {
-    /* Força a seção a ter, no mínimo, 80% da altura da tela do dispositivo. para permiter o destaque no header*/
-    min-height: 80vh; 
 }
 
 /* Estilos específicos para a seção 'Portfolio' */
